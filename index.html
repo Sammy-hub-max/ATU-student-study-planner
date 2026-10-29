@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATU Student Study Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+
+        <!-- Page heading -->
+        <header class="page-header">
+            <h1>ATU Student Study Planner</h1>
+            <p>Organise your study tasks and stay on track.</p>
+        </header>
+
+        <!-- Form for adding study tasks -->
+        <section class="task-section">
+            <h2>Add a Study Task</h2>
+
+            <form id="task-form">
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="task-title">
+                            Task Title (required)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task-title"
+                            placeholder="e.g. Revise Digital Electronics"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-subject">
+                            Subject or Course (required)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="task-subject"
+                            placeholder="e.g. Computer Engineering"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="add-button">
+                    + Add Task
+                </button>
+
+                <p id="form-message" role="alert"></p>
+            </form>
+        </section>
+
+        <!-- List of study tasks -->
+        <section class="task-list-section">
+            <h2>My Study Tasks</h2>
+
+            <p id="empty-state">
+                No study tasks yet. Add your first task above!
+            </p>
+
+            <ul id="task-list" aria-live="polite"></ul>
+        </section>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+            <p>
+                ATU Virtual Internship | Software Development Mini Project
+            </p>
+        </footer>
+
+    </main>
+</body>
+</html>
